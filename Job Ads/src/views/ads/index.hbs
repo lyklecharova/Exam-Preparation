@@ -1,0 +1,23 @@
+<main>
+
+    <section id="all-ads-page">
+        <article class="all-ads-title">
+            <h1>All ads</h1>
+            {{#if ads}}
+        </article>
+
+        <!--If there are job ads in the database, show each one-->
+        {{#each ads}}
+        {{>card}}
+        {{/each}}
+
+        {{else}}
+        <!--If there are still no job ads in the database display:-->
+        <article class="not-available-ads">
+            <h1>No ads created yet.</h1>
+            <h2>Join and find your perfect workers.</h2>
+        </article>
+        {{/if}}
+
+    </section>
+</main>
