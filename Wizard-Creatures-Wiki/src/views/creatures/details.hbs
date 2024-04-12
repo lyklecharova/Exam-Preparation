@@ -1,0 +1,66 @@
+<main>
+
+    <section id="details-page">
+
+        <div class="main_card">
+            <div class="card_left">
+                <div class="card_datails">
+
+                    <h1>Name: {{creature.name}}</h1>
+                    <h3>Created by an author: Alex Smith</h3>
+                    <div class="card_character">
+                        <p class="card-species">Species: {{creature.species}}</p>
+                        <p class="card-skin">Skin colour: {{creature.skinColor}}</p>
+                        <p class="card-eye">Eye Colour: {{creature.eyeColor}}</p>
+                    </div>
+
+                    <p class="disc">{{creature.description}}</p>
+                    {{#if isAuthenticated}}
+
+                    <!-- If there is no registered user, do not display buttons-->
+                    <div class="social-btn">
+                        {{#if isOwner}}
+                        <!-- Only for registered user and author of the post -->
+                        <a href="/creatures/{{creature._id}}/edit" class="edit-btn">Edit</a>
+                        <a href="/creatures/{{creature._id}}/delete" class="del-btn">Delete</a>
+                        {{else if isVoted}}
+                        <!-- logged in user who has already voted-->
+                        <p class="thanks-for-vote">Thanks For Voting</p>
+                        {{else}}
+                        <!-- logged in users, who have not yet voted-->
+                        <a href="/creatures/{{creature._id}}/votes" class="vote-up">Vote</a>
+                        {{/if}}
+
+
+
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="card_right">
+                <img src="{{creature.image}}" alt="image">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="votes">
+        <div class="vote-info">
+            <div class="card_left">
+                <div class="card_datails">
+                    <h1>Votes</h1>
+                    <div class="card_vote">
+                        <!-- Show the rating of votes, if there are no votes yet, the number must be 0. -->
+                        <p class="PV">Total rating of votes: 0</p>
+                    </div>
+                    <!-- If there are already people who have cast their vote for the post, separate their emails with a comma and a space ", " -->
+                    <!-- <p class="disc">People who voted for the post - alex@gmai.com, petar@gmail.com, petq@gmail.com</p>-->
+
+                    <!-- If not display: -->
+                    <p class="disc">People who voted for the post - No one has voted yet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
