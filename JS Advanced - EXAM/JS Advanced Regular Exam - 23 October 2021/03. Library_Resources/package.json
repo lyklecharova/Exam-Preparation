@@ -1,0 +1,17 @@
+{
+  "name": "03.-library_resources",
+  "version": "1.0.0",
+  "description": "",
+  "main": "library.js",
+  "scripts": {
+    "test": "mocha --require esm './library.test'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "esm": "^3.2.25",
+    "mocha": "^10.4.0"
+  }
+}
