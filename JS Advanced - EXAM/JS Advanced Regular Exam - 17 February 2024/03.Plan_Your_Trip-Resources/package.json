@@ -1,0 +1,17 @@
+{
+  "name": "03.plan_your_trip-resources",
+  "version": "1.0.0",
+  "description": "",
+  "main": "planYourTrip.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.1",
+    "fix-esm": "^1.0.1",
+    "mocha": "^10.4.0"
+  }
+}
