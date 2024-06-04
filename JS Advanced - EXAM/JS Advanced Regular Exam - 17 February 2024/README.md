@@ -1,0 +1,3 @@
+-   npm init -y
+-   npm i fix-esm
+-   npm i mocha chai
